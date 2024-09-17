@@ -1,0 +1,134 @@
+Please create 10 game levels of the famous NES videogame Flappy (1983) using ASCII characters inside a 17x13 ASCII matrix following the next rules:
+ASCII representations of the objects in the game:
+- The main character Flappy will be represented by the letter 'F'.
+- The enemies will be represented with the letter 'U' for each Unicorn and the letter 'E' for each Ebira.
+- The brown stones correspond to the letter 'P'.
+- The blue stone will be represented with the letter 'A' and the blue platform with the letter 'X'.
+- The mushrooms will be represented by the letter 'H'.
+- Bricks, which will form the walls and floors, will be represented with the character '='.
+- Everything that is not an object will be Void and will be represented with a space, the character ' '.
+
+Flappy Level Generation Rules:
+- The matrix boundaries will be represented as bricks.
+- All objects and characters must be represented within the boundaries.
+- Flappy, the blue stone and the blue platform must appear.
+- Flappy, the blue stone and the blue platform can only appear once in the whole matrix. 
+- Enemies, brown stones, mushrooms and bricks can exist several or none.
+- Flappy will always be represented in the upper left corner of the matrix, within the boundaries.
+- Flappy cannot appear surrounded by bricks that impede his movement.
+- To create a wall, several bricks will be used in a row, the walls can have any extension within the matrix, but in no case can they occupy the entire length or width of the matrix.
+- The brown stones will be generated on a brick or on another brown stone, but never on another type of object or Void.
+- The blue stone will be generated on a brick or on a brown stone, but never on another type of object or Void.
+- Mushrooms can only appear on a brick.
+- The blue platform can never have stones or bricks on top of it.
+
+To make the generated level playable the Flappy game rules are defined, use them to create coherent levels that allow a satisfactory game experience:
+The main objective is for the main character Flappy to move the blue stone from its starting position to the target blue platform in each level.
+
+Move the blue stone:
+- You can push the blue stone from the left or from the right.
+- You cannot push the bluestone if it is blocked by an obstacle (brick wall, another stone, etc.).
+- You cannot move the blue stone if it is in a gap where there is no room to push it.
+
+Enemies:
+- Unicorns move horizontally in repetitive patterns.
+- Ebira (crab enemies) chase Flappy both horizontally and vertically, mimicking his movements.
+- Sleepy mushrooms can be picked up and thrown to temporarily stun enemies.
+- Stones can be dropped on enemies to permanently eliminate them.
+
+Obstacles and Terrain:
+- Brick walls: You can only go around them, never through them.
+- Brown stones: Can be crushed if Flappy pushes them in a direction they can't go, if any fall on Flappy, he loses a life.
+- Gaps or dead angles: If the blue stone falls into one, it becomes unrecoverable, and the level must be restarted.
+- You cannot push more than one object at a time.
+
+
+Here I show some examples of levels to help you, but none of them can be repeated or copied:
+=================
+=F  P           =
+=   ====P       =
+=       ==      =
+=  P        A   =
+=  =  =     =====
+=  E  =         =
+=======         =
+= U           ===
+=======         =
+=               =
+= HH        X====
+=================
+
+
+=================
+=F              =
+=       A     H =
+=       =========
+=         =U   H=
+=    P    ==   ==
+=  ===      U   =
+=    =    =======
+=    ===        =
+=    P          =
+=  X =     P    =
+=================
+=================
+
+
+=================
+=F  P    HH     =
+=   =  ====  E  =
+=   =      ===  =
+=   ===       A =
+=   U    ==  ====
+=   ======      =
+=          ==== =
+=               =
+=   ==          =
+=           =====
+=   P  =X===    =
+=================
+
+
+=================
+=F   P          =
+=   ===         =
+=               =
+=               =
+=    A U        =
+=    ====    H  =
+=  ===     ===  =
+=    E          =
+=         ==    =
+=               =
+=       H   X   =
+=================
+
+
+=================
+=F              =
+=   P  ===      =
+=   ==  A       =
+=      ==       =
+=     U    P    =
+=  ==========   =
+=         =     =
+=         =     =
+=        H=  X  =
+=  H     =====  =
+=  ======       =
+=================
+
+
+=================
+=F    H         =
+=  ============ =
+=       U       =
+=   P           =
+=   ====  =======
+=   A           =
+=   ===         =
+=      ==       =
+=               =
+=         ====  =
+=    X   ==     =
+=================
